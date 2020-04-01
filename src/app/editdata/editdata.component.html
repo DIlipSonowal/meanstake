@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Hi {{tempData.name}} | Edit your details.</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+        <input matInput [(ngModel)]="tempData.name" placeholder="Name" />
+  </mat-form-field>
+
+  <mat-form-field>
+        <input matInput [(ngModel)]="tempData.email" placeholder="Email" />
+  </mat-form-field>
+
+  <mat-form-field>
+        <input matInput [(ngModel)]="tempData.mobile" placeholder="Mobile" maxlength="10"/>
+  </mat-form-field>
+
+  <mat-form-field>
+        <input matInput [(ngModel)]="tempData.address" placeholder="Address" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions >
+  <button mat-raised-button color="warn" [mat-dialog-close]="'cancel'" cdkFocusInitial>Cancel</button>
+  <!-- <button mat-button [mat-dialog-close]="tempData" cdkFocusInitial>Confirm</button> -->
+  <button [mat-dialog-close]="tempData" cdkFocusInitial mat-raised-button color="primary">Confirm</button>
+</div>
